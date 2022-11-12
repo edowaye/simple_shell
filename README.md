@@ -38,8 +38,8 @@ ls -la
 ```
 
 ## Contributors :sunglasses::muscle:
-* [**Fraol Tolera**](https://github.com/ekemini573)
-* [**Andrew Mukare**](https://github.com/edowaye)
+* [**Ekemini Etokakpan**](https://github.com/ekemini573)
+* [**Adenike Adenaiya**](https://github.com/edowaye)
 
 ## Acknowledgments :pray:
 - Our fellow cohort members.
