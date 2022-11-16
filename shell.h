@@ -12,6 +12,10 @@
 #include <fcntl.h>
 #include <errno.h>
 
+/*_tokenizer.c */
+char **strtow(char *, char *);
+char **strtow2(char *, char);
+
 /*_atoi.c */
 int interactive(info_t *);
 int is_delim(char, char *);
