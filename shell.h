@@ -12,6 +12,21 @@
 #include <fcntl.h>
 #include <errno.h>
 
+/*_atoi.c */
+int interactive(info_t *);
+int is_delim(char, char *);
+int _isalpha(int);
+int _atoi(char *);
+
+/*_builtin.c */
+int _myexit(info_t *);
+int _mycd(info_t *);
+int _myhelp(info_t *);
+
+/*_builtin1.c */
+int _myhistory(info_t *);
+int _myalias(info_t *);
+
 /*_errors1.c */
 int _erratoi(char *);
 void print_error(info_t *, char *);
