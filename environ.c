@@ -1,8 +1,9 @@
 #include "shell.h"
 
 /**
-  *_myenv - function that prints the current environment
-  *@info: Struct containing arguments that may
+  *_myenv - function prints current environment
+  *
+  *@info: struct containing arguments that may
   *be used
   *
   *Return: 0
@@ -15,12 +16,11 @@ int _myenv(info_t *info)
 }
 
 /**
-  *_getenv - funtion that fetches value of an environment var
-  *@info: Struct containing arguments that may be used
-  *@name: variable environment name
+  *_getenv - function fetches value of environment var
+  *@info: struct containing arguments that may be used
+  *@name: environment var name
   *
   *Return: value fetched
-  *
   */
 
 char *_getenv(info_t *info, const char *name)
@@ -39,10 +39,10 @@ char *_getenv(info_t *info, const char *name)
 }
 
 /**
-  *_mysetenv - function that initializes or modifies
-  *a new or existing environment variable
+  *_mysetenv - function that initializes a
+  *new or modifies and existing environment var
   *
-  *@info: Struct containing arguments that may be used
+  *@info: struct containing arguments that may be used
   *
   *Return: 0
   *
@@ -52,7 +52,7 @@ int _mysetenv(info_t *info)
 {
 	if (info->argc != 3)
 	{
-		_eputs("Incorrect number of arguments\n");
+		_eputs("Incorrect argument no\n");
 		return (1);
 	}
 	if (_setenv(info, info->argv[1], info->argv[2]))
@@ -61,12 +61,10 @@ int _mysetenv(info_t *info)
 }
 
 /**
-  *_myunsetenv - function that removes an environment variable
-  *
-  *@info: Structure containing arguments that may be used
+  *_myunsetenv - function that removes an enviromemt var
+  *@info: struct containing arguments that may be used
   *
   *Return: 0
-  *
   */
 
 int _myunsetenv(info_t *info)
@@ -75,31 +73,30 @@ int _myunsetenv(info_t *info)
 
 	if (info->argc == 1)
 	{
-		_eputs("Too few arguements.\n");
+		_eputs("Too few arguments\n");
 		return (1);
 	}
 	for (i = 1; i <= info->argc; i++)
 		_unsetenv(info, info->argv[i]);
-
 	return (0);
 }
 
 /**
-  *populate_env_list - function that populates the
-  *environment's linked list
+  *populate_env_list - function that populates
+  *emvironment linked lists
   *
-  *@info: Structure containing arguments that may be used
+  *@info: struct containing arguments that may be used
   *
   *Return: 0
   *
   */
 
-int populate_env_list(info_t *info)
+int populate-env_list(info_t *info)
 {
 	list_t *node = NULL;
 	size_t i;
 
-	for (i = 0; environ[i]; i++)
+	for (i = 0; environ [i]; i++)
 		add_node_end(&node, environ[i], 0);
 	info->env = node;
 	return (0);
