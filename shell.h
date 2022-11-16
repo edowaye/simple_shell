@@ -95,4 +95,9 @@ char *_strdup(const char *);
 void _puts(char *);
 int _putchar(char);
 
+/*_getline.c */
+ssize_t get_input(info_t *);
+int _getline(info_t *, char **, size_t *);
+void sigintHandler(int);
+
 #endif
